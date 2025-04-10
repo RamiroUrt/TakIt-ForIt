@@ -1,0 +1,233 @@
+@import "tailwindcss"; 
+:root {
+        --color-main: #100a26;
+        --color-violet: #46306e
+        --color-soft-lavender: #9582cc; 
+        --color-clear-cake-violet: #b6a7e1;
+        --color-blue-sky-off: #8faee5;
+
+        --border-radius: 20px;
+    }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: auto;
+    background: linear-gradient(
+  135deg, 
+  #100a26,     
+  #46306e,
+  #9582cc,     
+  #b6a7e1,     
+  #8faee5      
+);
+}
+.text-box-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.text-box-main h1{
+    font-size: calc(2em + 1vw);
+    font-weight: 700;
+}
+.task-list-contain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 3em;
+}
+
+.task-list-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 80%;
+    background-color: var(--color-clear-cake-violet);
+    width: 80%;
+    border-radius: var(--border-radius);
+}
+.button-create{
+    background-color: var(--color-blue-sky-off);
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+.button-create:hover{
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+.card-box{
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    width: 100%;
+    border-radius: var(--border-radius);
+    flex-wrap: wrap;
+}
+.card-buttons{
+    display: flex;
+    gap: 1em;
+}
+.card-buttons>button, .card-buttons>a{
+    background-color: var(--color-clear-cake-violet);
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+.card-buttons>button:hover, .card-buttons>a:hover{
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+.logo-contain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+/*********
+ * !FORM *
+ *********/
+
+ .form__group {
+   position: relative;
+   padding: 20px 0 0;
+   width: 100%;
+ }
+ 
+ .form__field {
+   font-family: inherit;
+   width: 100%;
+   border: none;
+   border-bottom: 2px solid #100a26;
+   outline: 0;
+   font-size: 17px;
+   color: #000000;
+   padding: 7px 0;
+   background: transparent;
+   transition: border-color 0.2s;
+   resize: none;
+ }
+ 
+ .form__field::placeholder {
+   color: transparent;
+ }
+ 
+ .form__field:placeholder-shown ~ .form__label {
+   font-size: 17px;
+   cursor: text;
+   top: 20px;
+ }
+ 
+ .form__label {
+   position: absolute;
+   top: 0;
+   display: block;
+   transition: 0.2s;
+   font-size: 17px;
+   color: #100a26;
+   pointer-events: none;
+ }
+ 
+ .form__field:focus {
+   padding-bottom: 6px;
+   font-weight: 700;
+   border-width: 3px;
+   border-image: linear-gradient(
+    135deg, 
+    #100a26,     
+    #46306e,
+    #9582cc,     
+    #b6a7e1,     
+    #8faee5      
+  );
+   border-image-slice: 1;
+ }
+ 
+ .form__field:focus ~ .form__label {
+   top: 0;
+   font-size: 17px;
+   color: #38caef;
+   font-weight: 700;
+ }
+ 
+ .form__field:required,
+ .form__field:invalid {
+   box-shadow: none;
+ }
+ 
+form{
+    background-color: var(--color-clear-cake-violet);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    gap: 2em;
+    display: flex;
+    max-width: 80%;
+    flex-direction: column;
+    min-width: 300px;
+    width: 60em;
+    margin: 0 auto;
+}
+form>button{
+    background-color: var(--color-clear-cake-violet);
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 auto;
+    max-width: 200px;
+}
+form>button:hover{
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+/*****************
+ * !Details *
+ *****************/
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+.container-details{
+    gap: 2em;
+    border-radius: var(--border-radius);
+    max-width: 80%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+@media screen and (max-width: 768px) {
+    .card-box{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        gap: 1em;
+    }
+    .container-details{
+        width: 80%;
+    }
+}
